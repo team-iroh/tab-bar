@@ -1,0 +1,39 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/team-iroh/za-service#readme",
+  "bugs": {
+    "url": "https://github.com/team-iroh/za-service/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-iroh/TabBar.git"
+  },
+  "license": "ISC",
+  "author": "Zach Ayers",
+  "main": "server/src/index.js",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently 'npm run dev:server' 'npm run dev:client'",
+    "dev:client": "cd client && npm run build-dev:watch",
+    "dev:server": "cd server && npm run dev",
+    "format": "(cd server && npm run format); (cd client && npm run format);",
+    "postinstall": "(cd client && npm install); (cd server && npm install);",
+    "lint": "(cd server && npm run lint); (cd client && npm run lint);",
+    "sort": "(npx sort-package-json); (cd server && npm run sort); (cd client && npm run sort);",
+    "build": "cd client && npm run build-prod",
+    "start": "cd server && npm run start"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "gulp": "^4.0.2",
+    "pre-commit": "^1.2.2"
+  }
+}

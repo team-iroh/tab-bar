@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+
+  # Backend API
+  tab-bar-service:
+    container_name: tab-bar
+    build: ./
+    command: yarn start
+    working_dir: /Workspace/fec-capstone/tab-bar
+    ports:
+      - "3004:3004"
+
+
