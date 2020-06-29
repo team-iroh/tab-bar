@@ -5,24 +5,44 @@ import { Container, LinkContainer, Link } from './TabBar.style';
 const TabBar = () => {
   const [selected, setSelected] = useState('Campaign');
 
+  const options = {
+    '1': 'Campaign',
+    '2': 'FAQ',
+    '3': 'Updates',
+    '4': 'Comments',
+    '5': 'Community',
+  };
+
+  const showAndSelect = (selection) => {
+    setSelected(selection);
+
+    if (selection === options['1']) {
+      document.getElementById('campaign').classList.add('active');
+      document.getElementById('app').classList.remove('active');
+    } else if (selection === options['2']) {
+      document.getElementById('campaign').classList.remove('active');
+      document.getElementById('app').classList.add('active');
+    }
+  };
+
   return (
     <div>
       <Container>
         <LinkContainer leftAlign>
-          <Link selected={selected} onClick={() => setSelected('Campaign')}>
-            Campaign
+          <Link selected={selected} onClick={() => showAndSelect(options['1'])}>
+            {options['1']}
           </Link>
-          <Link selected={selected} onClick={() => setSelected('FAQ')}>
-            FAQ
+          <Link selected={selected} onClick={() => showAndSelect(options['2'])}>
+            {options['2']}
           </Link>
-          <Link selected={selected} onClick={() => setSelected('Updates')}>
-            Updates
+          <Link selected={selected} onClick={() => showAndSelect(options['3'])}>
+            {options['3']}
           </Link>
-          <Link selected={selected} onClick={() => setSelected('Comments')}>
-            Comments
+          <Link selected={selected} onClick={() => showAndSelect(options['4'])}>
+            {options['4']}
           </Link>
-          <Link selected={selected} onClick={() => setSelected('Community')}>
-            Community
+          <Link selected={selected} onClick={() => showAndSelect(options['5'])}>
+            {options['5']}
           </Link>
         </LinkContainer>
       </Container>
