@@ -21,9 +21,9 @@
 - node >=12.16.3
 
 ## Mounting Points in index.html
-- TabBar module mounts to the div with id of 'TabBar'
+- TabBar module mounts to the div with id of 'tab-bar'
 ```html
-<div id="TabBar"></div>
+div id="tab-bar"></div>
 ```
 
 ## Install
