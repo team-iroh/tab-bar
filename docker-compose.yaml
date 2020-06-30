@@ -6,9 +6,7 @@ services:
   tab-bar-service:
     container_name: tab-bar
     build: ./
-    command: |
-      yarn build
-      yarn start
+    command: yarn start
     working_dir: /app
     ports:
       - "3004:3004"
