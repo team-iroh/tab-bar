@@ -18,10 +18,10 @@ const TabBar = () => {
 
     if (selection === options['1']) {
       document.getElementById('campaign').classList.add('active');
-      document.getElementById('app').classList.remove('active');
+      document.getElementById('update').classList.remove('active');
     } else if (selection === options['2']) {
       document.getElementById('campaign').classList.remove('active');
-      document.getElementById('app').classList.add('active');
+      document.getElementById('update').classList.add('active');
     }
   };
 
