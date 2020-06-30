@@ -17,11 +17,11 @@ const TabBar = () => {
     setSelected(selection);
 
     if (selection === options['1']) {
-      document.getElementById('campaign').classList.add('active');
-      document.getElementById('update').classList.remove('active');
+      document.getElementById('campaign').style.display = 'block';
+      document.getElementById('update').style.display = 'none';
     } else if (selection === options['2']) {
-      document.getElementById('campaign').classList.remove('active');
-      document.getElementById('update').classList.add('active');
+      document.getElementById('campaign').style.display = 'none';
+      document.getElementById('update').style.display = 'block';
     }
   };
 
