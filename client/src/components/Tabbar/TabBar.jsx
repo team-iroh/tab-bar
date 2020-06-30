@@ -19,7 +19,7 @@ const TabBar = () => {
     if (selection === options['1']) {
       document.getElementById('campaign').style.display = 'block';
       document.getElementById('update').style.display = 'none';
-    } else if (selection === options['2']) {
+    } else if (selection === options['3']) {
       document.getElementById('campaign').style.display = 'none';
       document.getElementById('update').style.display = 'block';
     }
